@@ -40,7 +40,7 @@ EfiLdrLoadImage (
              &ImageContext,
              FHand,
              BufferSize,
-             UEFI_IMAGE_SOURCE_FV
+             UEFI_IMAGE_SOURCE_NON_FV
              );
   if (EFI_ERROR (Status)) {
     return Status;
