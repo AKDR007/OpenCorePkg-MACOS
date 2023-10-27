@@ -22,8 +22,6 @@ Revision History:
 #include "Support.h"
 #include "LzmaDecompress.h"
 
-#include <Library/SerialPortLib.h>
-
 EFILDR_LOADED_IMAGE  DxeCoreImage;
 EFILDR_LOADED_IMAGE  DxeIplImage;
 
@@ -161,7 +159,6 @@ EfiLoader (
   // Decompress the image
   //
   Status = LzmaUefiDecompressGetInfo (
-
              (VOID *)(UINTN)(EFILDR_HEADER_ADDRESS + EFILDRImage->Offset),
              EFILDRImage->Length,
              &DestinationSize,
